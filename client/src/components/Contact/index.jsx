@@ -23,12 +23,12 @@ export default function index() {
                             <Image 
                             fill={true}
                             alt={"image"}
-                            src={`/images/background.jpg`}
+                            src={`/images/Profile.jpeg`}
                             />
                         </div>
-                        <h2>Let's work</h2>
+                        <h2>Email and </h2>
                     </span>
-                    <h2>together</h2>
+                    <h2>contact me now</h2>
                     <motion.div style={{x}} className={styles.buttonContainer}>
                         <Rounded  backgroundColor={"#334BD3"} className={styles.button}>
                             <p>Get in touch</p>
@@ -40,28 +40,28 @@ export default function index() {
                 </div>
                 <div className={styles.nav}>
                         <Rounded>
-                            <p>info@dennissnellenberg.com</p>
+                            <p>johnfrancistm@gmail.com</p>
                         </Rounded>
                         <Rounded>
-                            <p>+31 6 27 84 74 30</p>
+                            <p>0967-230-3005</p>
                         </Rounded>
                 </div>
                 <div className={styles.info}>
                     <div>
                         <span>
-                            <h3>Version</h3>
-                            <p>2022 © Edition</p>
+                            <h3>Portfolio V.1</h3>
+                            <p>2024 © Edition</p>
                         </span>
                         <span>
-                            <h3>Version</h3>
-                            <p>11:49 PM GMT+2</p>
+                            <h3>Version 1.0 </h3>
+                            <p>Philippines</p>
                         </span>
                     </div>
                     <div>
                         <span>
                             <h3>socials</h3>
                             <Magnetic>
-                                <p>Awwwards</p>
+                                <p>X</p>
                             </Magnetic>
                         </span>
                         <Magnetic>

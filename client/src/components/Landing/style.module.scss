@@ -21,7 +21,7 @@
     .slider p{
       position: relative;
       margin: 0px;
-      color: white;
+      color: rgba(0, 0, 0, 0.519);
       font-size: 230px;
       font-weight: 500;
       padding-right: 50px;
@@ -45,7 +45,7 @@
         margin-bottom: 10px;
       }
       svg{
-        transform: scale(2);
+        transform: scale(5);
         margin-bottom: 100px;
       }
     }
