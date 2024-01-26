@@ -1,6 +1,7 @@
 body {
     margin: 0px;
     overflow: auto; /* or overflow: scroll; */
+    overflow-x: hidden;
     cursor: auto; /* or any other cursor value that suits your design */
   }
   
