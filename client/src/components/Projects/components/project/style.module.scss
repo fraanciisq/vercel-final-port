@@ -1,38 +1,63 @@
-.project{
+.project {
     display: flex;
     width: 100%;
+    flex-direction: column; /* Display as column on smaller screens */
     justify-content: space-between;
-    align-items: center;
-    padding: 50px 100px 50px 100px;
+    align-items: flex-start; /* Align items to the start on smaller screens */
+    padding: 20px;
     border-top: 1px solid rgb(201, 201, 201);
     cursor: pointer;
     transition: all 0.2s;
 
-    h2{
-        font-size: 60px;
-        margin: 0px;
+    h2 {
+        font-size: 30px; /* Adjust the font size for smaller screens */
+        margin: 0;
         font-weight: 400;
         transition: all 0.4s;
     }
 
-    p{
+    p {
         transition: all 0.4s;
         font-weight: 300;
     }
 
-    &:last-of-type{
+    &:last-of-type {
         border-bottom: 1px solid rgb(201, 201, 201);
     }
 
-    &:hover{
+    &:hover {
         opacity: 0.5;
 
-        h2{
-            transform: translateX(-10px);
+        h2 {
+            transform: translateX(-5px);
         }
 
-        p{
-            transform: translateX(10px);
+        p {
+            transform: translateX(5px);
         }
+    }
+
+    @media (min-width: 768px) {
+        /* Apply styles for larger screens */
+        flex-direction: row;
+        align-items: center;
+        padding: 50px 100px 50px 100px;
+
+        &:hover {
+            h2 {
+                transform: translateX(0);
+            }
+
+            p {
+                transform: translateX(0);
+            }
+        }
+    }
+}
+
+/* Add the following media query for fixing image display on mobile */
+@media (max-width: 767px) {
+    .project:hover .image-container {
+        display: none;
     }
 }

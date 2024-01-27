@@ -21,7 +21,7 @@ export default function Index() {
             </span>
           ))}
         </p>
-        <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>
+        <motion.p variants={opacity} animate={isInView ? "open" : "closed"} className={styles.descriptionText}>
           Passionate about design, coding, and interactive tech, I&rsquo;m uniquely positioned in the software engineering world, ready to create impactful solutions
         </motion.p>
         <div data-scroll data-scroll-speed={0.1}>
