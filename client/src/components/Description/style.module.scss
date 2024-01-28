@@ -99,6 +99,12 @@
                 font-weight: 300;
                 position: relative;
                 z-index: 1;
+
+                @media screen and (max-width: 768px) {
+                    font-size: 10px;
+                 
+                }
+
             }
         }
     }

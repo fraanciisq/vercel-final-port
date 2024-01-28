@@ -50,7 +50,7 @@ export default function Index() {
                     <div>
                         <span>
                             <h3>Portfolio V.1</h3>
-                            <p>2024 © Edition</p>
+                            <p>2024 © Inspired by: Dennis Snellenberg </p>
                         </span>
                         <span>
                             <h3>Version 1.0 </h3>

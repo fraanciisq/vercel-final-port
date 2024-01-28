@@ -43,11 +43,22 @@
       p{
         margin: 0px;
         margin-bottom: 10px;
+        
+        @media screen and (max-width: 768px) {
+          font-size: 10px;
+      }
+        
       }
       svg{
         transform: scale(5);
         margin-bottom: 100px;
+
+        @media screen and (max-width: 768px) {
+          transform: scale(2);
       }
+
+      }
+
     }
   }
   
