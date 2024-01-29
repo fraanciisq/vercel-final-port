@@ -7,7 +7,7 @@
     padding: 35px;
     justify-content: space-between;
     width: 100%;
-    font-weight: 250;
+    font-weight: 300;
     box-sizing: border-box;
     align-items: center;
     
@@ -35,6 +35,9 @@
                     position: absolute;
                     left: 120px;
                     padding-left: 0.3em;
+
+               
+                    
                 }
             }
         }
@@ -90,7 +93,8 @@
             cursor: pointer;
 
             @media screen and (max-width: 768px) {
-                font-size: 12px;
+                font-size: 15px;
+                padding-left: 12px;
             }
         }
     } 
