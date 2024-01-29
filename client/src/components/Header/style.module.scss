@@ -7,7 +7,7 @@
     padding: 35px;
     justify-content: space-between;
     width: 100%;
-    font-weight: 300;
+    font-weight: 250;
     box-sizing: border-box;
     align-items: center;
     
@@ -90,7 +90,7 @@
             cursor: pointer;
 
             @media screen and (max-width: 768px) {
-                font-size: 11px;
+                font-size: 12px;
             }
         }
     } 
