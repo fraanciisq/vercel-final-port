@@ -97,7 +97,14 @@
                 padding-left: 12px;
             }
         }
+
+          // New styles for hiding "Contact" on mobile
+    @media screen and (max-width: 768px) {
+        .el:nth-of-type(3) {
+          display: none; // Hide the "Contact" link on mobile
+        }
     } 
+}
 }
 .headerButtonContainer{
     transform: scale(0);
