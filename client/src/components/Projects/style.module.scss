@@ -1,87 +1,94 @@
 .projects {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex-direction: column;
+  margin-top: 100px;
+
+  @media (min-width: 768px) {
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-top: 300px;
+  }
+
+  .body {
+    max-width: 100%;
+    width: 100%;
     display: flex;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
     flex-direction: column;
-    margin-top: 100px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+  }
+
+  .modalContainer {
+    height: auto;
+    width: 100%;
+    position: relative;
+    background-color: white;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 3;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
     @media (min-width: 768px) {
-        padding-left: 200px;
-        padding-right: 200px;
-        margin-top: 300px;
+      height: 350px;
+      width: 400px;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin-top: 0;
+      transform: translate(-50%, -50%);
     }
+  }
 
-    .body {
-        max-width: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 100px;
+  .modalSlider {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  }
+
+  .modal {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .cursor,
+  .cursorLabel {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #455CE9;
+    color: white;
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 300;
+    pointer-events: none;
+  }
+
+  .cursorLabel {
+    background-color: transparent;
+  }
+
+  &.mobileContainer {
+    @media (max-width: 767px) {
+      // Adjust the spacing for mobile view
+      padding-bottom: 20px; // You can adjust the value accordingly
     }
-
-    .modalContainer {
-        height: auto;
-        width: 100%;
-        position: relative;
-        background-color: white;
-        pointer-events: none;
-        overflow: hidden;
-        z-index: 3;
-        margin-top: 20px;
-        margin-bottom: 20px;
-
-        @media (min-width: 768px) {
-            height: 350px;
-            width: 400px;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            margin-top: 0;
-            transform: translate(-50%, -50%);
-        }
-    }
-
-    .modalSlider {
-        height: 100%;
-        width: 100%;
-        position: relative;
-        transition: top 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-    }
-
-    .modal {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .modal img {
-        height: auto;
-        max-width: 100%;
-    }
-
-    .cursor,
-    .cursorLabel {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background-color: #455CE9;
-        color: white;
-        position: fixed;
-        z-index: 3;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 12px;
-        font-weight: 300;
-        pointer-events: none;
-    }
-
-    .cursorLabel {
-        background-color: transparent;
-    }
+  }
 }
