@@ -11,13 +11,13 @@ import Magnetic from '../../common/Magnetic';
 
 export default function Index() {
   const header = useRef(null);
-  const [isActive, setIsActive] = useState(false);
+  const isActiveRef = useRef(false); // Use ref to store the current value of isActive
   const pathname = usePathname();
   const button = useRef(null);
 
   useEffect(() => {
-    if (isActive) setIsActive(false);
-  }, [pathname, isActive]); // Include isActive in the dependency array
+    if (isActiveRef.current) setIsActive(false); // Check the ref value instead of the state
+  }, [pathname]);
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -26,32 +26,30 @@ export default function Index() {
         trigger: document.documentElement,
         start: 0,
         end: window.innerHeight,
-        onLeave: () => {
-          gsap.to(button.current, { scale: 1, duration: 0.25, ease: 'power1.out' });
-        },
+        onLeave: () => gsap.to(button.current, { scale: 1, duration: 0.25, ease: 'power1.out' }),
         onEnterBack: () => {
           gsap.to(button.current, { scale: 0, duration: 0.25, ease: 'power1.out' });
-          setIsActive((prev) => !prev); // Use functional update to avoid 'isActive' in the dependency array
+          isActiveRef.current = false; // Update the ref value
         },
       },
     });
-  }, [isActive]); // Include isActive in the dependency array
+  }, [isActiveRef]); // Include the ref in the dependency array
 
   return (
     <>
       <div ref={header} className={styles.header}>
         <div className={styles.logo}>
-          <p className={styles.copyright}>©</p>
+          <p className={styles.copyright}>|</p>
           <div className={styles.name}>
-            <p className={styles.codeBy}>Code by</p>
-            <p className={styles.dennis}>Dennis</p>
-            <p className={styles.snellenberg}>Snellenberg</p>
+            <p className={styles.codeBy}>Portfolio</p>
+            <p className={styles.dennis}>Francis</p>
+            <p className={styles.snellenberg}>Tamondong</p>
           </div>
         </div>
         <div className={styles.nav}>
           <Magnetic>
             <div className={styles.el}>
-              <a>Work</a>
+              <a>Projects</a>
               <div className={styles.indicator}></div>
             </div>
           </Magnetic>
@@ -70,11 +68,13 @@ export default function Index() {
         </div>
       </div>
       <div ref={button} className={styles.headerButtonContainer}>
-        <Rounded onClick={() => setIsActive(!isActive)} className={`${styles.button}`}>
-          <div className={`${styles.burger} ${isActive ? styles.burgerActive : ''}`}></div>
+        <Rounded onClick={() => (isActiveRef.current = !isActiveRef.current)} className={`${styles.button}`}>
+          <div className={`${styles.burger} ${isActiveRef.current ? styles.burgerActive : ''}`}></div>
         </Rounded>
       </div>
-      <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
+      <AnimatePresence mode="wait">
+        {isActiveRef.current && <Nav />}
+      </AnimatePresence>
     </>
   );
 }
