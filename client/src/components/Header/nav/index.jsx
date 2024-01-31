@@ -13,8 +13,8 @@ const navItems = [
     href: "/",
   },
   {
-    title: "Projects",
-    href: "/projects",
+    title: "Work",
+    href: "/work",
   },
   {
     title: "About",
@@ -26,7 +26,7 @@ const navItems = [
   },
 ]
 
-export default function Index() {
+export default function index() {
 
   const pathname = usePathname();
   const [selectedIndicator, setSelectedIndicator] = useState(pathname);
@@ -45,10 +45,10 @@ export default function Index() {
                         <p>Navigation</p>
                     </div>
                     {
-                      navItems.map( (data, Index) => {
+                      navItems.map( (data, index) => {
                         return <Link 
-                        key={Index} 
-                        data={{...data, Index}} 
+                        key={index} 
+                        data={{...data, index}} 
                         isActive={selectedIndicator == data.href} 
                         setSelectedIndicator={setSelectedIndicator}>
                         </Link>
