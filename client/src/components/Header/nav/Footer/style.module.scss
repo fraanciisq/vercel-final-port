@@ -4,4 +4,9 @@
     justify-content: space-between;
     font-size: 12px;
     gap: 40px;
-}
+
+    @media screen and (max-width: 768px) {
+        font-size: 8px ;
+    }
+        
+ }
