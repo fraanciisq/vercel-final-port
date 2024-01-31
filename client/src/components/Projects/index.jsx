@@ -12,27 +12,23 @@ const projects = [
   {
     title: "TOPSystem - Oracle",
     src: "topsystem.png",
-    color: "#000000",
-    link: "https://tops.net.ph", // Add the link property for the href
+    color: "#000000"
   },
   {
     title: "Eco Pro WP",
     src: "ecopro.png",
-    color: "#8C8C8C",
-    link: "/ecopro", // Add the link property for the href
+    color: "#8C8C8C"
   },
   {
     title: "Car Counter - Python",
     src: "carcounter.jpg",
-    color: "#EFE8D3",
-    link: "/carcounter", // Add the link property for the href
+    color: "#EFE8D3"
   },
   {
     title: "Object Detection - Python",
     src: "objectdet.png",
-    color: "#706D63",
-    link: "/objectdetection", // Add the link property for the href
-  },
+    color: "#706D63"
+  }
 ];
 
 const scaleAnimation = {
@@ -90,11 +86,7 @@ export default function Home() {
     >
       <div className={styles.body}>
         {projects.map((project, index) => {
-          return (
-            <a key={index} href={project.link} className={styles.projectLink}>
-              <Project index={index} title={project.title} manageModal={manageModal} />
-            </a>
-          );
+          return <Project index={index} title={project.title} manageModal={manageModal} key={index} />;
         })}
       </div>
       <Rounded>
