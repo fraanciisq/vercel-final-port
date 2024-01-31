@@ -35,9 +35,6 @@
                     position: absolute;
                     left: 120px;
                     padding-left: 0.3em;
-
-               
-                    
                 }
             }
         }
@@ -56,8 +53,6 @@
                 .snellenberg{
                     transform: translateX(-65px);
                 }
-
-
             }
         }
     }
@@ -91,20 +86,8 @@
         }
         a{
             cursor: pointer;
-
-            @media screen and (max-width: 768px) {
-                font-size: 15px;
-                padding-left: 12px;
-            }
-        }
-
-          // New styles for hiding "Contact" on mobile
-    @media screen and (max-width: 768px) {
-        .el:nth-of-type(3) {
-          display: none; // Hide the "Contact" link on mobile
         }
     } 
-}
 }
 .headerButtonContainer{
     transform: scale(0);
