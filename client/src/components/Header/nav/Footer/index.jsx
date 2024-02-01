@@ -5,7 +5,7 @@ export default function index() {
     <div className={styles.footer}>
         <a>X or Twitter</a>
         <a>Instagram</a>
-        <a>Dribble</a>
+        <a>GitHub</a>
         <a>LinkedIn</a>
     </div>
   )
