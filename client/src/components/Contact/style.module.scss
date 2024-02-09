@@ -32,8 +32,7 @@
                     overflow: hidden;
                     
                     @media screen and (max-width: 768px) {
-                    display: none;
-
+                        display: none;
                     }
 
                     img {
@@ -54,7 +53,8 @@
                 @media screen and (max-width: 768px) {
                     font-size: 25px;
                     margin-top: 10px;
-                    margin-left: 10px;
+                    margin-left: auto;
+                    margin-right: auto;
                     text-align: center;
                     font-style: bold;
                 }
@@ -62,8 +62,15 @@
 
             .buttonContainer {
                 position: absolute;
-                left: calc(100% - 400px);
+                left: calc(50% - 90px);
                 top: calc(100% - 75px);
+
+                @media screen and (max-width: 768px) {
+                    left: auto;
+                    right: auto;
+                    top: auto;
+                    bottom: 20px;
+                }
             }
 
             .button {
@@ -81,7 +88,6 @@
                 @media screen and (max-width: 768px) {
                     width: 100px; /* Adjust the width for smaller screens */
                     height: 100px; /* Adjust the height for smaller screens */
-                    margin-left: 70px;
                 }
 
                 p {
