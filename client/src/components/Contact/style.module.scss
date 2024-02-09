@@ -111,6 +111,13 @@
                     font-weight: 300;
                     z-index: 2;
                     position: relative;
+                    
+                    @media screen and (max-width: 768px) {
+                        font-size: 12px;
+                    }
+
+
+
                 }
             }
 
@@ -154,6 +161,10 @@
                     margin: 0px;
                     padding: 2.5px;
                     cursor: pointer;
+
+                    @media screen and (max-width: 768px) {
+                    font-size: 12px;
+                    }
                 }
 
                 p {
@@ -188,6 +199,10 @@
                     cursor: default;
                     font-weight: 300;
                     font-size: 1em;
+
+                    @media screen and (max-width: 768px) {
+                    font-size: 12px;
+                    }
                 }
             }
         }
