@@ -23,13 +23,13 @@ export default function Index({ index, title, manageModal }) {
     };
 
     const handleProjectClick = () => {
-        // Check if the clicked project is "TOPSystem" or "Eco Pro WP" before redirecting
+        // Validate Title
         if (title === 'TOPSystem - Oracle') {
-            // Replace 'your-link-here' with the actual link for "TOPSystem"
+            // Redirect to Tops PH
             const projectLink = 'https://tops.net.ph';
             window.location.href = projectLink;
         } else if (title === 'Eco Pro WP') {
-            // Redirect to www.ecoprodisinfectpm.com for "Eco Pro WP"
+            // Redirect to Eco Pro Link
             window.location.href = 'https://www.ecoprodisinfectpm.com';
         } else if (title === 'Car Counter - Python') {
             window.location.href = 'https://drive.google.com/file/d/1ZrJPN865rCGkp7gP1P5vUaMaUjcil33G/view?usp=sharing';
