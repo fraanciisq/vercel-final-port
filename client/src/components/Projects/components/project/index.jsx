@@ -31,6 +31,9 @@ export default function Index({ index, title, manageModal }) {
         } else if (title === 'Eco Pro WP') {
             // Redirect to www.ecoprodisinfectpm.com for "Eco Pro WP"
             window.location.href = 'https://www.ecoprodisinfectpm.com';
+        } else if (title === 'Car Counter - Python') {
+            window.location.href = 'https://drive.google.com/file/d/1ZrJPN865rCGkp7gP1P5vUaMaUjcil33G/view?usp=sharing';
+
         }
     };
 
