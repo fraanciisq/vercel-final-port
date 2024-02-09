@@ -124,6 +124,12 @@
                 gap: 20px;
                 margin-top: 20px; /* Adjust this value as needed */
             }
+
+            p {
+                text-decoration: none; /* Remove underline and default blue color */
+                cursor: pointer;
+                color: white; /* Set text color to white */
+            }
         }
 
         .info {

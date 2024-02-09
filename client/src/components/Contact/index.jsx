@@ -61,7 +61,7 @@ export default function Index() {
                         <span>
                             <h3>socials</h3>
                             <Magnetic>
-                                <p>X or Twitter</p>
+                                <p>X</p>
                             </Magnetic>
                         </span>
                         <Magnetic>
